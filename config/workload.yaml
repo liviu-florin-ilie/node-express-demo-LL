@@ -1,0 +1,15 @@
+apiVersion: carto.run/v1alpha1
+kind: Workload
+metadata:
+  name: node-express-demo-LL
+  namespace: default
+  labels:
+    apps.tanzu.vmware.com/workload-type: web
+    app.kubernetes.io/part-of: node-express-demo-LL
+spec:
+  source:
+    git:
+      ref:
+        branch: main
+      url: https://github.com/liviu-florin-ilie/node-express-demo-LL.git
+    subPath: node-express-demo-LL
